@@ -17,7 +17,6 @@
                 expression: Message sent to RabbitMQ at ${date:now:yyyy-MM-dd HH:mm:ss} `
         - to:
             id: to-0dc6
-            description: send-to-mq
             uri: kamelet:spring-rabbitmq-sink
             parameters:
               host: rabbitmq
@@ -26,3 +25,4 @@
               routingKey: test-queue
               username: "{{env:MQ_USER}}"
               password: "{{env:MQ_PASSWORD}}"
+              queues: test
