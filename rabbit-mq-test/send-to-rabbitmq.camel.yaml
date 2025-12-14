@@ -6,7 +6,7 @@
       description: Trigger Message every 5s
       uri: timer
       parameters:
-        delay: "5000"
+        delay: "1000"
         period: "5000"
         timerName: hello
       steps:
@@ -22,7 +22,5 @@
             parameters:
               host: rabbitmq
               port: 5672
-              routingKey: erp-requests-mq
-              username: "{{env:MQ_USER}}"
-              password: "{{env:MQ_PASSWORD}}"
               exchangeName: default
+              routingKey: " test-queue"
