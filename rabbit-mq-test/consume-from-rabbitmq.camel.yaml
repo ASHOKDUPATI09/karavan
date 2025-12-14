@@ -1,0 +1,15 @@
+- route:
+    id: route-ef9a
+    nodePrefixId: route-599
+    from:
+      id: from-bfcc
+      uri: kamelet:spring-rabbitmq-source
+      parameters:
+        host: rabbitmq
+        port: 5672
+        exchangeName: default
+        queues: test-queue
+      steps:
+        - log:
+            id: log-eeae
+            message: consume messages from rabbit MQ:{body}
